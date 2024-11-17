@@ -11,8 +11,8 @@ safedata = pd.read_csv('../Processed_Data/AQI_Final.csv')
 data = pd.read_csv('../Processed_Data/AQI_Final.csv')
 
 def randomRF(State_Name):
-    safedata = pd.read_csv('/Users/rahib/Air_Quality_Predictor/Processed_Data/AQI_Final.csv')
-    data = pd.read_csv('/Users/rahib/Air_Quality_Predictor/Processed_Data/AQI_Final.csv')
+    safedata = pd.read_csv('../Processed_Data/AQI_Final.csv')
+    data = pd.read_csv('../Processed_Data/AQI_Final.csv')
     # Filter the state
     data = data[data['State Name'] == State_Name]
     
