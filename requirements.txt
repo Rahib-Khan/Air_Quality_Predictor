@@ -1,0 +1,3 @@
+streamlit
+pandas
+tableauserverclient==0.20
