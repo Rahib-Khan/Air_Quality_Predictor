@@ -56,7 +56,13 @@ with tabs[0]:
 # Map Visualization Tab
 with tabs[1]:
     st.subheader("🌟 Visualization of Air Quality Trends")
-    st.components.v1.iframe(src=tableau_public_url, width=1000, height=800)
+    
+    # Center the iframe and increase its size
+    st.markdown("""
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <iframe src="{}" width="1000" height="800"></iframe>
+        </div>
+    """.format(tableau_public_url), unsafe_allow_html=True)
 
 # Prediction Tab
 with tabs[2]:
@@ -128,8 +134,6 @@ with tabs[3]:
         ### 👥 Meet the Team
         - **Rahib Khandaker**  
           💡 Computer Science Student at CUNY Queens College with a minor in Data Analytics.  
-          [Visit Rahib's LinkedIn Profile](https://www.linkedin.com/in/rahib-khandaker/)
-                
           [Visit Rahib's Portfolio Website](https://rahib-khan.github.io/)
         
         - **Mohamed Anas Aaffoute**  
