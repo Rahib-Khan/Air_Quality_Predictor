@@ -56,7 +56,7 @@ with tabs[0]:
 # Map Visualization Tab
 with tabs[1]:
     st.subheader("🌟 Visualization of Air Quality Trends")
-    st.components.v1.iframe(src=tableau_public_url, width=800, height=600)
+    st.components.v1.iframe(src=tableau_public_url, width=1000, height=800)
 
 # Prediction Tab
 with tabs[2]:
