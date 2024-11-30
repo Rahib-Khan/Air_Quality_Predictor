@@ -10,60 +10,59 @@ tableau_public_url = "https://public.tableau.com/views/Book1_17323934199370/Shee
 
 # Set Streamlit page configuration
 st.set_page_config(
-    page_title="Air Quality Prediction",
+    page_title="Air Quality App",
     page_icon="🌎",
     layout="centered"
 )
 
-# Apply CSS for styling
-st.markdown("""
-    <style>
-    body {
-        background-color: #eef2f3;
-    }
-    .main {
-        background-color: transparent;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    .stButton>button {
-        background-color: #007bff;
-        color: white;
-        border-radius: 5px;
-        padding: 10px 20px;
-        border: none;
-        font-size: 16px;
-    }
-    .stButton>button:hover {
-        background-color: #0056b3;
-    }
-    h1 {
-        color: white;
-        text-align: center;
-        font-family: Arial, sans-serif;
-        margin-bottom: 20px;
-    }
-    h3 {
-        color: white;
-        margin-top: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
+# App title
+st.title("🌎 Air Quality Dashboard")
 
-# Wrap everything in a centered container
-with st.container():
-    # App title
-    st.title("Air Quality Prediction")
+# Create tabs
+tabs = st.tabs(["📖 Introduction", "🌍 Map Visualization", "📊 Predict AQI"])
 
-    # Embed Tableau Public dashboard
-    st.markdown("### Visualization of Air Quality Trends")
+# Introduction Tab
+with tabs[0]:
+    st.subheader("📖 What is AQI?")
+    st.markdown("""
+        The **Air Quality Index (AQI)** is a measure used to communicate how polluted the air currently is or how polluted it is forecast to become. 
+        AQI values range from 0 to 500, with higher values indicating worse air quality. Key pollutants include:
+        - Particulate matter (PM2.5 and PM10)
+        - Ozone (O3)
+        - Nitrogen dioxide (NO2)
+        - Sulfur dioxide (SO2)
+        - Carbon monoxide (CO)
+        
+        The AQI is divided into categories, each corresponding to a different level of health concern:
+        - **0–50:** Good
+        - **51–100:** Moderate
+        - **101–150:** Unhealthy for sensitive groups
+        - **151–200:** Unhealthy
+        - **201–300:** Very Unhealthy
+        - **301–500:** Hazardous
+    """)
+    
+    st.subheader("📊 About Our Model")
+    st.markdown("""
+        This application uses a **Random Forest Tree** to predict AQI values based on:
+        - **Population trends** in different states.
+        - **Number of non-renewable vehicles**, which contribute to pollution.
+        
+        The model was trained using a dataset spanning **10 years (2013–2023)**, including AQI data, population statistics, and vehicle registrations. 
+        Predictions are state-specific and consider factors such as historical AQI trends and population growth. The main goal is to provide actionable insights for reducing air pollution.
+    """)
+    st.image('Images/output.png', caption='Model Prediction vs Actual')
+
+# Map Visualization Tab
+with tabs[1]:
+    st.subheader("🌟 Visualization of Air Quality Trends")
     st.components.v1.iframe(src=tableau_public_url, width=800, height=600)
 
-    # User inputs section
-    st.markdown("### 📋 Input Details")
+# Prediction Tab
+with tabs[2]:
+    st.subheader("📋 Predict Air Quality Index")
+    
+    # List of states
     states = [
         "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
         "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois",
