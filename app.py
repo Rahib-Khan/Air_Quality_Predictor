@@ -128,7 +128,8 @@ with tabs[3]:
         ### 👥 Meet the Team
         - **Rahib Khandaker**  
           💡 Computer Science Student at CUNY Queens College with a minor in Data Analytics.  
-          [Visit Rahib's LinkedIn Profile](https://www.linkedin.com/in/rahib-khandaker/)  
+          [Visit Rahib's LinkedIn Profile](https://www.linkedin.com/in/rahib-khandaker/)
+          [Visit Rahib's Portfolio Website](https://rahib-khan.github.io/)
         
         - **Mohamed Anas Aaffoute**  
           🌍 Computer Science Student at CUNY Queens College and an aspiring software engineer.  
