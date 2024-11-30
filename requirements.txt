@@ -1,4 +1,5 @@
 streamlit
+joblib
 pandas
 joblib
 tableauserverclient==0.20
