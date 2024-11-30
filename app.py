@@ -19,7 +19,7 @@ st.set_page_config(
 st.title("🌎 Air Quality Dashboard")
 
 # Create tabs
-tabs = st.tabs(["📖 Introduction", "🌍 Map Visualization", "📊 Predict AQI"])
+tabs = st.tabs(["📖 Introduction", "🌍 Map Visualization", "📊 Predict AQI", "🧍 About Us"])
 
 # Introduction Tab
 with tabs[0]:
@@ -116,3 +116,30 @@ with tabs[2]:
                 st.success(f"✅ The predicted Air Quality Index (AQI) for {state_name} is: {prediction:.2f}")
             except Exception as e:
                 st.error(f"❌ Error during prediction: {e}")
+
+
+
+with tabs[3]:
+    st.subheader("👨‍👩‍👧‍👦 About Us")
+    st.markdown("""
+        Welcome to our **Air Quality Prediction App**!  
+        We are a team of three passionate individuals who collaborated to build this application to raise awareness about air quality trends and empower data-driven decisions.
+
+        ### 👥 Meet the Team
+        - **Rahib Khandaker**  
+          💡 Computer Science Student at CUNY Queens College with a minor in Data Analytics.  
+          [Visit Rahib's LinkedIn Profile](https://www.linkedin.com/in/rahib-khandaker/)  
+        
+        - **Mohamed Anas Aaffoute**  
+          🌍 Computer Science Student at CUNY Queens College and an aspiring software engineer.  
+          [Visit Anas's Portfolio Website](https://main.d3imjygzv65w7j.amplifyapp.com/)  
+        
+        - **Arnan Khan**  
+          📚 Computer Science student at CUNY Queens College with expertise in data analysis and web development.  
+          [Visit Arnan's Portfolio Website](https://arnank.github.io/Portfolio-Website/)  
+
+        ### 💡 Our Vision
+        Our mission is to leverage technology to promote cleaner air and a healthier environment by providing valuable insights into air quality data.
+
+        **Thank you for exploring our app!**
+    """)
