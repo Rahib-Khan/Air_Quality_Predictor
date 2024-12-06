@@ -48,7 +48,7 @@ with tabs[0]:
         - **Population trends** in different states.
         - **Number of non-renewable vehicles**, which contribute to pollution.
         
-        The model was trained using a dataset spanning **10 years (2013–2023)**, including AQI data, population statistics, and vehicle registrations. 
+        The model was trained using a dataset spanning **7 years (2016–2023)**, including AQI data, population statistics, and vehicle registrations. 
         Predictions are state-specific and consider factors such as historical AQI trends and population growth. The main goal is to provide actionable insights for reducing air pollution.
     """)
     st.image('Images/output.png', caption='Model Prediction vs Actual')
